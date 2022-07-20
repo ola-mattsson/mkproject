@@ -13,7 +13,7 @@ Because it's not very straight-forward starting a C++ project with cmake and con
 It's understandable that conan focuses on publishing to help creators fill up the conan-store with good things, but the user/consumer side is somewhat lacking IMHO.
 
 ## Usage
-Assuming only the compiler you request is available and works. Tested with gcc and clang, on macOS and Linux
+Assuming that the compiler you request is available and works. Tested with gcc and clang, on macOS and Linux
 
 ```
 $ mkproject.sh
