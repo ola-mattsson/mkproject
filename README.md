@@ -43,8 +43,9 @@ Other dependencies are found at https://conan.io/center/, or with `conan search 
 If you are a bit new in unix land
 Don't spam places like `/usr/local/bin` with your own scripts. Make a `~/bin` and put it in PATH with `export PATH=~/bin:$PATH`. Put scripts like this one there. (the `~` char is short hand for current users home folder, same as environment variable `$HOME`)
 It's good practice to always set CC and CXX to the preferred compiler e.g. `export CXX=/usr/bin/clang++`, this helps when you have edited the c++ code and build again with for example `conan build . -bf cmake-build-debug` or `cmake --build cmake-build-debug`
-Clean up the build files with `rm -fr cmake-build-debug/*`, then recreate with `conan install . -if cmake-build-debug` (or from inside the build folder ommit the `-if cmake-build-debug`, then `cmake . -B cmake-build-debug`.
+Clean up the build files with `rm -fr cmake-build-debug/* `, then recreate with `conan install . -if cmake-build-debug` (or from inside the build folder ommit the `-if cmake-build-debug`, then `cmake . -B cmake-build-debug`.
 Optimised release build: `mkdir cmake-build-release` `conan install . -if cmake-build-release -s settings.build_type=Release` and `conan build . -bf cmake-build-release`, or just with cmake still need to run `conan install . -if cmake-build-release` then `cmake . -B cmake-build-release -DCMAKE_BUILD_TYPE=Release` and `cmake --build -B cmake-build=release`
+Confused yet? Look at the conanfile.py, the build function does cmake configure and build. Try the above and find your own way of working.
 
 ## disclaimer of sort
 The script is not very polished, and I make no claims it's correct in every aspect, it helps me though. Let me know if you have suggestions to improve it.
