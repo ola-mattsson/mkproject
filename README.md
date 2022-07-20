@@ -35,4 +35,11 @@ Your new project is built and the requested settings are tested.
 ## Next step,
 Delete all the spam in the cpp file and add your own, don't cargo-cult. Also the CMakeLists.txt file might need some tidying up too.
 
+## Hint
+If you are a bit new in unix land
+Don't spam places like `/usr/local/bin` with your own scripts. Make a `~/bin` and put it in PATH. Put scripts like this one there.
+
+## disclaimer of sort
+The script is not very polished, and I make no claims it's correct in every aspect, it helps me though. Let me know if you have suggestions to improve it.
+
 Have fun!
